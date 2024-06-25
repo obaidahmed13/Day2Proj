@@ -1,0 +1,11 @@
+<div class="d-flex flex-column align-items-center mt-4">
+    <h1>Projects</h1>
+    <div *ngFor="let project of projects" class="p-4 border border-2 shadow-sm w-75 mt-3">
+        <h2>{{ project.title }}</h2>
+        <p class="mt-4">Description: {{ project.description }}</p>
+        <p>
+            Technologies:
+            {{project.technologies}}
+        </p>
+    </div>
+</div>

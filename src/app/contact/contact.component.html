@@ -1,0 +1,39 @@
+<div class="row justify-content-center mt-4">
+    <div class="col-6">
+        <div class="border border-secondary shadow-sm rounded-2 p-5 mb-4">
+            <h1>Contact</h1>
+            <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+                <div class="mb-4">
+                    <label class="form-label">First Name:</label>
+                    <input class="form-control" name="first" ngModel required #first="ngModel">
+                </div>
+                <div class="mb-4">
+                    <label class="form-label">Last Name:</label>
+                    <input class="form-control" name="last" ngModel required #last="ngModel">
+                </div>
+                <div class="mb-4">
+                    <label class="form-label">Email:</label>
+                    <input class="form-control" name="email" ngModel email required #email="ngModel">
+                </div>
+                <button class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-6">
+        <div>
+            <p>First Name: {{first.value}}</p>
+            <p>First Name valid: {{first.valid}}</p>
+            <p>Last Name: {{last.value}}</p>
+            <p>Last Name valid: {{last.valid}}</p>
+            <p>Email: {{email.value}}</p>
+            <p>Email valid: {{email.valid}}</p>
+            <p>Form Values: {{f.value | json}}</p>
+            <p>Form Valid: {{f.valid}}</p>
+        </div>
+    </div>
+</div>
+
+
+
